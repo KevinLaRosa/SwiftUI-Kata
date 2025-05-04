@@ -46,17 +46,17 @@ struct ConverterView: View {
                     Text("Please select your amount")
                 }
                 footer: {
-                    Text("1 \(viewModel.targetCurrency.name) equals \(viewModel.exchangeRate) \(viewModel.targetCurrency.name)")
+                    Text("1 \(viewModel.sourceCurrency.name) equals \(viewModel.exchangeRate) \(viewModel.targetCurrency.name)")
                 }
                 
                 Section {
                     Text(viewModel.convertedAmount, format: .currency(code: viewModel.targetCurrency.rawValue))
                 }
                 header: {
-                    Text("Conversion \(viewModel.targetCurrency.rawValue) => \(viewModel.targetCurrency.rawValue)")
+                    Text("\(viewModel.targetCurrency.rawValue) => \(viewModel.targetCurrency.rawValue)")
                 }
             }
-            .navigationTitle("WeSplito")
+            .navigationTitle("Convert Money")
             .toolbar {
                 if amountIsFocused {
                     Button("Done") {
