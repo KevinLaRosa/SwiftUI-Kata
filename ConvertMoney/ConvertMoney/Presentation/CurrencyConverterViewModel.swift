@@ -59,15 +59,24 @@ class CurrencyConverterViewModel: ObservableObject {
     
     // MARK: - Private Methods
     private func setupBindings() {
-        // Automatically convert when any input changes
-        Publishers.CombineLatest3($amount, $sourceCurrency, $targetCurrency)
-            .debounce(for: 0.5, scheduler: RunLoop.main)
-            .sink { [weak self] _, source, target in
-                if source != self?.sourceCurrency {
+        
+        var previousCurrency: Currency = sourceCurrency
+        
+        $sourceCurrency
+            .sink { [weak self] newCurrency in
+                if previousCurrency != newCurrency {
+                    print("Currency changed from \(previousCurrency.rawValue) to \(newCurrency.rawValue)")
                     self?.fetchLatestRates()
-                } else {
-                    self?.convert()
+                    previousCurrency = newCurrency
                 }
+            }
+            .store(in: &cancellables)
+        
+        Publishers.CombineLatest($amount, $targetCurrency)
+            .dropFirst()
+            .sink { [weak self] _, _ in
+                print("Amount or target currency changed")
+                self?.convert()
             }
             .store(in: &cancellables)
     }

@@ -38,8 +38,12 @@ struct ConverterView: View {
                 Section {
                     TextField("Amount",
                               value: $viewModel.amount,
-                              format: .currency(code: viewModel.targetCurrency.rawValue))
+                              format: .currency(code: viewModel.sourceCurrency.rawValue))
+#if os(iOS)
                     .keyboardType(.decimalPad)
+#endif
+                    
+                    
                     .focused($amountIsFocused)
                 }
                 header: {

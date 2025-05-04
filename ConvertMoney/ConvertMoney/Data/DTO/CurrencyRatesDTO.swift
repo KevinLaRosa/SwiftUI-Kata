@@ -1,10 +1,3 @@
-//
-//  RatesResponseDTO.swift
-//  ConvertMoney
-//
-//  Created by Roger La Rosa on 04/05/2025.
-//
-
 struct CurrencyRatesDTO: Decodable {
     let date: String
     // Propriété dynamique pour stocker les taux
@@ -31,18 +24,18 @@ struct CurrencyRatesDTO: Decodable {
         return rates
     }
     
-    // Clés de décodage dynamiques
-    private struct DynamicCodingKeys: CodingKey {
+    // Clés de décodage dynamiques 
+    struct DynamicCodingKeys: CodingKey {
         var stringValue: String
         var intValue: Int?
         
         init?(stringValue: String) {
             self.stringValue = stringValue
-            self.intValue = nil
         }
         
         init?(intValue: Int) {
-            return nil
+            self.intValue = intValue
+            self.stringValue = "\(intValue)"
         }
     }
 }
