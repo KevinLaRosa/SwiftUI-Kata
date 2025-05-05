@@ -41,14 +41,19 @@ class CurrencyConverterViewModel: ObservableObject {
         isLoading = true
         errorMessage = nil
         
+        print("Fetching rates for source currency: \(sourceCurrency.rawValue)")
+        
         Task {
             do {
                 rates = try await exchangeRateService.fetchRates(for: sourceCurrency)
+                print("Received rates: \(rates)")
+                
                 await MainActor.run {
                     self.isLoading = false
                     self.convert()
                 }
             } catch {
+                print("Error fetching rates: \(error)")
                 await MainActor.run {
                     self.isLoading = false
                     self.errorMessage = "Impossible de récupérer les taux: \(error.localizedDescription)"
@@ -59,7 +64,6 @@ class CurrencyConverterViewModel: ObservableObject {
     
     // MARK: - Private Methods
     private func setupBindings() {
-        
         var previousCurrency: Currency = sourceCurrency
         
         $sourceCurrency
@@ -82,11 +86,17 @@ class CurrencyConverterViewModel: ObservableObject {
     }
     
     private func convert() {
-        guard let rate = rates[targetCurrency.rawValue.lowercased()] else {
+        let targetCurrencyCode = targetCurrency.rawValue.lowercased()
+        print("Converting to currency: \(targetCurrencyCode)")
+        print("Available rates: \(rates)")
+        
+        guard let rate = rates[targetCurrencyCode] else {
+            print("Rate not found for currency: \(targetCurrencyCode)")
             errorMessage = "Taux de change non disponible pour \(targetCurrency.name)"
             return
         }
         
+        print("Found rate: \(rate)")
         exchangeRate = rate
         convertedAmount = amount * rate
     }

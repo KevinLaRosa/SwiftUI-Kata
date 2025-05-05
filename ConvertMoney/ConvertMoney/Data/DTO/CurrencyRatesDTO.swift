@@ -6,16 +6,28 @@ struct CurrencyRatesDTO: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: DynamicCodingKeys.self)
         
-        // Décodage de la date
-        if let dateKey = container.allKeys.first(where: { $0.stringValue == "date" }) {
-            date = try container.decode(String.self, forKey: dateKey)
-        } else {
-            date = ""
+        // Decode the date
+        date = try container.decode(String.self, forKey: DynamicCodingKeys(stringValue: "date")!)
+        
+        // Get all keys except "date"
+        let currencyKeys = container.allKeys.filter { $0.stringValue != "date" }
+        
+        // There should be exactly one currency key (e.g., "eur", "usd", etc.)
+        guard let currencyKey = currencyKeys.first else {
+            throw DecodingError.dataCorruptedError(
+                forKey: DynamicCodingKeys(stringValue: "rates")!,
+                in: container,
+                debugDescription: "No currency key found in response"
+            )
         }
         
-        // Récupération de la clé de devise (eur, usd, etc.)
-        if let currencyKey = container.allKeys.first(where: { $0.stringValue != "date" }) {
-            rates = try container.decode([String: Double].self, forKey: currencyKey)
+        // Decode the nested rates object
+        let ratesContainer = try container.nestedContainer(keyedBy: DynamicCodingKeys.self, forKey: currencyKey)
+        
+        // Convert all rates to lowercase keys
+        for key in ratesContainer.allKeys {
+            let rate = try ratesContainer.decode(Double.self, forKey: key)
+            rates[key.stringValue.lowercased()] = rate
         }
     }
     
