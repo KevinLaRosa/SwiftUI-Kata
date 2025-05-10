@@ -1,0 +1,12 @@
+{
+    "[swift]": {
+      "editor.defaultFormatter": "sweetpad.sweetpad",
+      "editor.formatOnSave": true
+    },
+    "sweetpad.format.path": "/opt/homebrew/bin/swiftformat",
+    // The "--quiet" flag ignores stderr output,
+    // preventing the extension from misinterpreting it as a failure.
+    "sweetpad.format.args": ["--quiet", "${file}"],
+    "sweetpad.enable": true,
+    "sweetpad.languageServer.enable": true
+  }

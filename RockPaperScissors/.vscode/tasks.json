@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Run RockPaperScissors",
+            "type": "shell",
+            "command": "sh",
+            "args": [
+                "-c",
+                "xcodebuild -scheme RockPaperScissors -configuration Debug -workspace RockPaperScissors.xcodeproj/project.xcworkspace -destination 'platform=iOS Simulator,id=02CE665E-8634-497F-8901-B8202E5A8774' build && xcrun simctl shutdown 02CE665E-8634-497F-8901-B8202E5A8774 || true && xcrun simctl boot 02CE665E-8634-497F-8901-B8202E5A8774 && APP_PATH=$(xcodebuild -scheme RockPaperScissors -configuration Debug -workspace RockPaperScissors.xcodeproj/project.xcworkspace -destination 'platform=iOS Simulator,id=02CE665E-8634-497F-8901-B8202E5A8774' -showBuildSettings | grep TARGET_BUILD_DIR | cut -d '=' -f2 | xargs)/RockPaperScissors.app && xcrun simctl install 02CE665E-8634-497F-8901-B8202E5A8774 \"$APP_PATH\" && xcrun simctl launch --console-pty 02CE665E-8634-497F-8901-B8202E5A8774 com.kevinlarosa.RockPaperScissors"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+} 

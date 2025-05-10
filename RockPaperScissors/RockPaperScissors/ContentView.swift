@@ -8,14 +8,41 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+    
+    @StateObject private var viewModel = RockPaperScissorsViewModel()
+    
+    @ViewBuilder
+    var GameView: some View {
+        switch viewModel.gameState {
+        case .selection:
+            GameModeSelectionView(viewModel)
+        case .playing:
+            GamePlayView(viewModel)
+        case .result:
+            GameResultView(viewModel)
         }
-        .padding()
+    }
+    
+    var body: some View {
+        NavigationStack {
+            ZStack {
+                BackgroundView()
+                    .ignoresSafeArea()
+                VStack(alignment: .center) {
+                    Text("🪨, 📄, ✂️ Game")
+                        .font(.largeTitle.bold())
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding()
+                    Spacer()
+                    GameView
+                        .padding(32)
+                    Spacer()
+          
+                }
+            }
+        }
+      
     }
 }
 
