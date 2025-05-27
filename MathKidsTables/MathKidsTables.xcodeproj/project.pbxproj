@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB0DA0782DE649AB008C30DB /* QuestionsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0DA0772DE649A9008C30DB /* QuestionsResult.swift */; };
+		DB0DA07A2DE65638008C30DB /* ItemResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0DA0792DE65638008C30DB /* ItemResultView.swift */; };
+		DB0DA07C2DE6643C008C30DB /* QuizResultDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0DA07B2DE66434008C30DB /* QuizResultDetailScreen.swift */; };
+		DB31CE522DD9DF8900E0B1AE /* MathKidsTablesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB31CE512DD9DF8900E0B1AE /* MathKidsTablesApp.swift */; };
+		DB31CE562DD9DF8A00E0B1AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB31CE552DD9DF8A00E0B1AE /* Assets.xcassets */; };
+		DB31CE6B2DD9E60C00E0B1AE /* QuizResultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB31CE692DD9E60C00E0B1AE /* QuizResultScreen.swift */; };
+		DB31CE6C2DD9E60C00E0B1AE /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB31CE682DD9E60C00E0B1AE /* HomeScreen.swift */; };
+		DB31CE6D2DD9E60C00E0B1AE /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB31CE672DD9E60C00E0B1AE /* AppScreen.swift */; };
+		DB31CE702DD9E62C00E0B1AE /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB31CE6F2DD9E62C00E0B1AE /* ItemView.swift */; };
+		DB31CE722DD9E78700E0B1AE /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB31CE712DD9E78500E0B1AE /* NavigationRouter.swift */; };
+		DB31CE7B2DD9EABB00E0B1AE /* NumberOfQuestionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB31CE792DD9EABA00E0B1AE /* NumberOfQuestionScreen.swift */; };
+		DB31CE7D2DDA2F7300E0B1AE /* QuizScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB31CE7C2DDA2F7300E0B1AE /* QuizScreen.swift */; };
+		DB31CE832DDA30E800E0B1AE /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB31CE812DDA30E100E0B1AE /* GameManager.swift */; };
+		DB31CEB82DDA331300E0B1AE /* NumberOfQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB31CE852DDA316300E0B1AE /* NumberOfQuestion.swift */; };
+		DB31CEBA2DDA33B800E0B1AE /* MultiplicationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB31CEB92DDA33B800E0B1AE /* MultiplicationTable.swift */; };
+		DB31CEBC2DDA392B00E0B1AE /* MultiplicationTableRandomQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB31CEBB2DDA392800E0B1AE /* MultiplicationTableRandomQuestion.swift */; };
+		DB31CEBE2DDB554100E0B1AE /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB31CEBD2DDB554100E0B1AE /* BackButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DB0DA0772DE649A9008C30DB /* QuestionsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsResult.swift; sourceTree = "<group>"; };
+		DB0DA0792DE65638008C30DB /* ItemResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemResultView.swift; sourceTree = "<group>"; };
+		DB0DA07B2DE66434008C30DB /* QuizResultDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultDetailScreen.swift; sourceTree = "<group>"; };
+		DB31CE4E2DD9DF8900E0B1AE /* MathKidsTables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathKidsTables.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB31CE512DD9DF8900E0B1AE /* MathKidsTablesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathKidsTablesApp.swift; sourceTree = "<group>"; };
+		DB31CE552DD9DF8A00E0B1AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB31CE672DD9E60C00E0B1AE /* AppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
+		DB31CE682DD9E60C00E0B1AE /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		DB31CE692DD9E60C00E0B1AE /* QuizResultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultScreen.swift; sourceTree = "<group>"; };
+		DB31CE6F2DD9E62C00E0B1AE /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		DB31CE712DD9E78500E0B1AE /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		DB31CE792DD9EABA00E0B1AE /* NumberOfQuestionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfQuestionScreen.swift; sourceTree = "<group>"; };
+		DB31CE7C2DDA2F7300E0B1AE /* QuizScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizScreen.swift; sourceTree = "<group>"; };
+		DB31CE812DDA30E100E0B1AE /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		DB31CE852DDA316300E0B1AE /* NumberOfQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfQuestion.swift; sourceTree = "<group>"; };
+		DB31CEB92DDA33B800E0B1AE /* MultiplicationTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplicationTable.swift; sourceTree = "<group>"; };
+		DB31CEBB2DDA392800E0B1AE /* MultiplicationTableRandomQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplicationTableRandomQuestion.swift; sourceTree = "<group>"; };
+		DB31CEBD2DDB554100E0B1AE /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB31CE4B2DD9DF8900E0B1AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB31CE452DD9DF8900E0B1AE = {
+			isa = PBXGroup;
+			children = (
+				DB31CE842DDA313200E0B1AE /* Manager */,
+				DB31CE7F2DDA30C900E0B1AE /* Model */,
+				DB31CE7E2DDA302500E0B1AE /* Screen */,
+				DB31CE6E2DD9E61500E0B1AE /* Components */,
+				DB31CE552DD9DF8A00E0B1AE /* Assets.xcassets */,
+				DB31CE712DD9E78500E0B1AE /* NavigationRouter.swift */,
+				DB31CE512DD9DF8900E0B1AE /* MathKidsTablesApp.swift */,
+				DB31CE672DD9E60C00E0B1AE /* AppScreen.swift */,
+				DB31CE4F2DD9DF8900E0B1AE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB31CE4F2DD9DF8900E0B1AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB31CE4E2DD9DF8900E0B1AE /* MathKidsTables.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB31CE6E2DD9E61500E0B1AE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DB0DA0792DE65638008C30DB /* ItemResultView.swift */,
+				DB31CE6F2DD9E62C00E0B1AE /* ItemView.swift */,
+				DB31CEBD2DDB554100E0B1AE /* BackButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DB31CE7E2DDA302500E0B1AE /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				DB0DA07B2DE66434008C30DB /* QuizResultDetailScreen.swift */,
+				DB31CE682DD9E60C00E0B1AE /* HomeScreen.swift */,
+				DB31CE792DD9EABA00E0B1AE /* NumberOfQuestionScreen.swift */,
+				DB31CE7C2DDA2F7300E0B1AE /* QuizScreen.swift */,
+				DB31CE692DD9E60C00E0B1AE /* QuizResultScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		DB31CE7F2DDA30C900E0B1AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB0DA0772DE649A9008C30DB /* QuestionsResult.swift */,
+				DB31CEBB2DDA392800E0B1AE /* MultiplicationTableRandomQuestion.swift */,
+				DB31CE852DDA316300E0B1AE /* NumberOfQuestion.swift */,
+				DB31CEB92DDA33B800E0B1AE /* MultiplicationTable.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB31CE842DDA313200E0B1AE /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				DB31CE812DDA30E100E0B1AE /* GameManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB31CE4D2DD9DF8900E0B1AE /* MathKidsTables */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB31CE592DD9DF8A00E0B1AE /* Build configuration list for PBXNativeTarget "MathKidsTables" */;
+			buildPhases = (
+				DB31CE4A2DD9DF8900E0B1AE /* Sources */,
+				DB31CE4B2DD9DF8900E0B1AE /* Frameworks */,
+				DB31CE4C2DD9DF8900E0B1AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MathKidsTables;
+			packageProductDependencies = (
+			);
+			productName = MathKidsTables;
+			productReference = DB31CE4E2DD9DF8900E0B1AE /* MathKidsTables.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB31CE462DD9DF8900E0B1AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					DB31CE4D2DD9DF8900E0B1AE = {
+						CreatedOnToolsVersion = 16.3;
+					};
+				};
+			};
+			buildConfigurationList = DB31CE492DD9DF8900E0B1AE /* Build configuration list for PBXProject "MathKidsTables" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB31CE452DD9DF8900E0B1AE;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DB31CE4F2DD9DF8900E0B1AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB31CE4D2DD9DF8900E0B1AE /* MathKidsTables */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB31CE4C2DD9DF8900E0B1AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB31CE562DD9DF8A00E0B1AE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB31CE4A2DD9DF8900E0B1AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB31CE6B2DD9E60C00E0B1AE /* QuizResultScreen.swift in Sources */,
+				DB31CE722DD9E78700E0B1AE /* NavigationRouter.swift in Sources */,
+				DB0DA0782DE649AB008C30DB /* QuestionsResult.swift in Sources */,
+				DB31CE702DD9E62C00E0B1AE /* ItemView.swift in Sources */,
+				DB31CE6C2DD9E60C00E0B1AE /* HomeScreen.swift in Sources */,
+				DB31CE6D2DD9E60C00E0B1AE /* AppScreen.swift in Sources */,
+				DB31CE7B2DD9EABB00E0B1AE /* NumberOfQuestionScreen.swift in Sources */,
+				DB31CEBE2DDB554100E0B1AE /* BackButton.swift in Sources */,
+				DB31CEBA2DDA33B800E0B1AE /* MultiplicationTable.swift in Sources */,
+				DB31CEBC2DDA392B00E0B1AE /* MultiplicationTableRandomQuestion.swift in Sources */,
+				DB0DA07A2DE65638008C30DB /* ItemResultView.swift in Sources */,
+				DB31CE7D2DDA2F7300E0B1AE /* QuizScreen.swift in Sources */,
+				DB31CEB82DDA331300E0B1AE /* NumberOfQuestion.swift in Sources */,
+				DB0DA07C2DE6643C008C30DB /* QuizResultDetailScreen.swift in Sources */,
+				DB31CE522DD9DF8900E0B1AE /* MathKidsTablesApp.swift in Sources */,
+				DB31CE832DDA30E800E0B1AE /* GameManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DB31CE572DD9DF8A00E0B1AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = S9HVD4F7Q2;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 18.4;
+			};
+			name = Debug;
+		};
+		DB31CE582DD9DF8A00E0B1AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = S9HVD4F7Q2;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				TVOS_DEPLOYMENT_TARGET = 18.4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB31CE5A2DD9DF8A00E0B1AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S9HVD4F7Q2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinlarosa.MathKidsTables;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		DB31CE5B2DD9DF8A00E0B1AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S9HVD4F7Q2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinlarosa.MathKidsTables;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB31CE492DD9DF8900E0B1AE /* Build configuration list for PBXProject "MathKidsTables" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB31CE572DD9DF8A00E0B1AE /* Debug */,
+				DB31CE582DD9DF8A00E0B1AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB31CE592DD9DF8A00E0B1AE /* Build configuration list for PBXNativeTarget "MathKidsTables" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB31CE5A2DD9DF8A00E0B1AE /* Debug */,
+				DB31CE5B2DD9DF8A00E0B1AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB31CE462DD9DF8900E0B1AE /* Project object */;
+}
